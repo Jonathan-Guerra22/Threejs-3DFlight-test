@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>3D Flight Map</title>
+  <style>
+    body {
+      margin: 0;
+    }
+  </style>
+
+  <!-- GLOBE -->
+  <script src="//unpkg.com/d3"></script>
+  <script src="//unpkg.com/polished@3.5.2/dist/polished.js"></script>
+  <script src="//unpkg.com/globe.gl"></script>
+
+  <!-- FONTS -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@600&display=swap" rel="stylesheet">
+
+</head>
+
+<body style="overflow-x: hidden;">
+
+
+  <!-- NAV BAR -->
+  <div class="nav_wrapper">
+    <h2 style="color: white; margin-left: 50px;margin-top: 50px;">Proyecto Computacion Grafica</h2>
+  </div>
+  <!-- GLOBE -->
+  <div id="globeViz"></div>
+
+  <!-- TEXT -->
+  <div class="text">
+    <div class="input">
+      <!-- <form id="form1">
+        <input type="text" id="fICAO" name="fICAO" maxlength="4" autocomplete="off"
+          placeholder="Enter 4-digit ICAO Code"
+          oninput="let p = this.selectionStart; this.value = this.value.toUpperCase();this.setSelectionRange(p, p);">
+      </form>
+    </div>
+    <button type="button" id="bICAO" form="form1" value="submit">View flights</button> -->
+    <div class="info">
+
+      <label class="switch">
+        <input type="radio" name="radio" id="BOGOTA" value="SKBO">
+        <span class="slider round"></span>
+        <span>Bogota</span>
+      </label><br><br>
+
+      <label class="switch">
+        <input type="radio" name="radio" id="MADRID" value="LEMD">
+        <span class="slider round"></span>
+        <span>Madrid</span>
+      </label><br><br>
+
+      <label class="switch">
+        <input type="radio" name="radio" id="LOS-ANGELES" value="KLAX">
+        <span class="slider round"></span>
+        <span>Los Angeles</span>
+      </label>
+
+    </div>
+  </div>
+
+  <!-- AIRPORT ICAO AND COORDS -->
+  <script src="./airport_data.js"></script>
+  <script src="./globe.js"></script>
+
+</body>
